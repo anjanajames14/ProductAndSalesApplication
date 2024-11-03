@@ -46,10 +46,10 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers(HttpMethod.GET, AppConstants.API_URL).permitAll()
-                        .requestMatchers(HttpMethod.POST, AppConstants.API_URL).hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, AppConstants.API_URL).hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, AppConstants.API_URL).hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, AppConstants.PRODUCT_API_URL,AppConstants.SALES_API_URL).permitAll()
+                        .requestMatchers(HttpMethod.POST, AppConstants.PRODUCT_API_URL,AppConstants.SALES_API_URL).hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, AppConstants.PRODUCT_API_URL,AppConstants.SALES_API_URL).hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, AppConstants.PRODUCT_API_URL,AppConstants.SALES_API_URL).hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .httpBasic();

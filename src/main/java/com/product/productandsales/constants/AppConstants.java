@@ -16,6 +16,8 @@ public class AppConstants {
 
     public static final String ERROR_RESPONSE_MESSAGE_CODE = "PAPI0400";
 
-    public static final String API_URL ="/api/products/**";
+    public static final String PRODUCT_API_URL ="/api/products/**";
+
+    public static final String SALES_API_URL ="/api/sales/**";
 }
 
